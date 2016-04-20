@@ -18,7 +18,7 @@ class LogStash::Outputs::SlackChat< LogStash::Outputs::Base
   public
   def receive(event)
 		client = Manticore::Client.new
-		client.get(url, params: {token:token, channel:channel, text:event['message']}).body
+		client.get(@url, params: {token:@token, channel:@channel, text:event['message']}).body
     return "Event received"
   end # def event
 end # class LogStash::Outputs::SlackChat
