@@ -15,7 +15,7 @@
 		}
 
 		output {
-			slack_channel {
+			slack_chat {
 				url => "http://slack.com/api/chat.postMessage"
 				token => "YOUR_TOKEN_STRING"
 				channel => "SLACK_CHANNEL_ID"
